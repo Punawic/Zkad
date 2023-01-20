@@ -1,0 +1,158 @@
+[data-theme-version="dark"] {
+    &[data-sidebar-style="mini"] {
+		.deznav .metismenu li > ul{
+			background-color: $dark-card;
+		}
+	}
+	&[data-layout="vertical"]{
+		&[data-sidebar-style="modern"] {
+			.deznav {
+				.metismenu {
+					&>li {
+						&:hover, 
+						&:focus, 
+						&.mm-active {
+							&>a {
+								background:$primary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&[data-layout="vertical"]{
+		&[data-sidebar-style="compact"] {
+			.deznav {
+				.metismenu {
+					&>li {
+						&:hover, 
+						&:focus, 
+						&.mm-active {
+							&>a {
+								background:transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+		.deznav {
+			
+			.metismenu {
+				&>li {
+					&>a {
+						color: rgba($white,0.8);
+					}
+					&:hover, 
+					&:focus, 
+					&.mm-active {
+						&>a {
+							color: $white!important;
+							background:rgba($white,0.1)!important;
+							box-shadow:none!important;
+							&::after {
+								border-color: $white;
+							}
+							i{
+								color:$primary!important;
+							}
+						}
+					}
+				}
+			}
+			.copyright{
+				color:$white;
+			}
+		}
+	}
+	.fixed-content-box{
+		background-color: $dark-card;
+		.head-name{
+			background:$dark-card;
+			color: $white;
+			border-color:$d-border; 
+		}
+		& + .header + .deznav{
+			background-color: $d-bg;
+		}
+	}
+	&[data-sidebar-style="full"][data-layout="vertical"]{
+		.menu-toggle .deznav .metismenu li > ul{
+			background:$dark-card;
+		}
+	}
+    .deznav {
+        background-color: $dark-card;
+		
+        .metismenu {
+    
+    
+            &>li {
+		
+                &>a {
+                    color: darken($color: $white, $amount: 30%);
+                }
+    
+                &:hover, 
+                &:focus, 
+                &.mm-active {
+    
+                    &>a {
+                        color: $white;
+                        &::after {
+                            border-color: $white;
+                        }
+						i{
+							color:$white!important;
+						}
+                    }
+                }
+    
+                &.mm-active {
+					
+                    ul {
+						
+                        ul {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+    
+            //one step dropdown
+            ul  {
+                
+				&:after{
+					background-color:$d-border;
+				}
+				
+                a {
+    
+                    &:hover,
+                    &:focus, 
+                    &.mm-active {
+                        color: $white;
+                    } 
+					&:before{
+						background-color: rgba($white,0.5);
+					}
+					
+                }
+            }
+            
+            a {
+                color: darken($color: $white, $amount: 30%);
+            }
+    
+            .has-arrow {
+                &:after {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+    
+    
+
+}

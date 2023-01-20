@@ -1,0 +1,23 @@
+
+
+
+.footer {
+    padding-left: 21.563rem;
+    background-color: $body-bg;
+    @include custommq($min: 1200px, $max: 1600px) {
+        padding-left: 17rem;
+    }
+    .copyright {
+        padding: 0.9375rem;
+        p {
+            text-align: center;
+            margin: 0;
+        }
+
+        a{
+            color: $primary;
+        }
+    }
+}
+
+
