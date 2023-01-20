@@ -1,0 +1,66 @@
+.border-radius-50{
+    border-radius: 50px;
+}
+.border-radius-none{
+    border-radius: 0px;
+}
+
+.font-12{
+    font-size: 12px;
+    color: blue;
+}
+
+.color-blue{
+    color: blue;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.bg-custom{
+    background-color: #e4f5e6 ;
+}
+
+.table__heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* th, td {
+    text-align: center;
+} */
+
+.table__day thead tr th:nth-child(9), .table__day tr td:nth-child(9)  {
+    background-color: rgb(214, 214, 120);
+}
+
+.role-btn{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+#box {
+    border:1px solid #f3f3f3;
+    display:block; 
+    border-radius: 1.25rem;
+    line-height: 1.5;
+    padding: 8px;
+}
+
+#box:hover {
+    border-color: #5e72e4;
+}
+#box input,#box input:active,#box input:focus{border:none;background:none;outline:none}
+#box ul,#box li{margin:0;padding:0}
+#box ul,#box li{list-style:none}
+#box li,#box a{display:inline-block;margin:2px}
+#box span{background-color:#EDEDED;padding:3px;color:#666666;border:1px solid #CCCCCC}
+#box a{font-size:12px;line-height:12px;color:#666666;text-decoration:none;padding:1px 3px;margin-left:5px;font-weight:bold;background-color:#FFFFFF;vertical-align:top;border:1px solid #CCCCCC;margin-top:-1px}
+#box a:hover{background-color:#666666;color:#FFFFFF}
+
+/* why not? */
+#box span{border-radius:5px}
+#box a{border-radius:100%;}
