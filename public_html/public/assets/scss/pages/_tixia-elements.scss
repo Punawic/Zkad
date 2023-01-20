@@ -1,0 +1,117 @@
+//event-bx
+.event-bx{
+	.card-media{
+		position:relative;
+		img{
+			width:100%;
+			height:560px;
+			object-fit:cover;
+		}
+		.overlay-bx{
+			width:100%;
+			position:absolute;
+			bottom:0;
+			left:15px;
+		}	
+	}
+}
+
+
+
+//table-review
+.review-table{
+	padding: 25px;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+	height: auto;
+    margin-bottom: 0;
+	
+	.disease {
+		border-left: 1px solid #eee;
+		padding-left: 20px;
+		@include respond('tab-port') {
+			border-left: 0;
+			padding-left: 0;	
+			margin-right:10px !important;
+			margin-left:0;
+		}
+	}
+	.star-review i{
+	
+		font-size:20px;
+		@include respond('tab-port') {
+			font-size:216x;
+		}
+	}
+	.media-body{
+		p{
+			color:#3e4954;
+			font-size:15px;
+			line-height:1.5;
+			@include respond('tab-port') {
+				font-size:14px;
+			}
+		}
+	}
+	.media-footer{
+		min-width:500px;
+		@include respond('laptop') {
+			min-width:300px;
+			margin-left:10px;
+		}
+		@include respond('tab-port') {
+			margin-left:0;
+			margin-top:25px;
+		}
+	}
+	img{
+		@include respond('tab-port') {
+			float:left;
+			width: 80px;
+		}
+	}
+	.media{
+		@include respond('tab-port') {
+			display:block !important;
+		}
+		
+	}
+	@include respond('tab-land') {
+		.custom-control{
+			float:right;
+		}
+			
+	}
+	@include respond('tab-port') {
+		padding: 15px;
+	}
+	&:hover{
+		box-shadow:$box-shadow;
+	}
+}
+
+.nav-pills.review-tab{
+	.nav-item{
+		.nav-link{
+			font-weight: 500;
+			&.active{
+				background:$white;
+				color:$black;
+				box-shadow:none;
+				position:relative;
+				&:after{
+					position:absolute;
+					height:4px;
+					width:60px;
+					border-radius:$radius;
+					left:50%;
+					transform:translateX(-50%);
+					bottom:-12px;
+					background:$primary;
+					content:"";
+				}
+			}
+		}
+	}
+}

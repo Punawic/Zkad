@@ -1,0 +1,183 @@
+.event-sidebar {
+    position: fixed;
+    width: 380px;
+    right: -400px;
+    background: #fff;
+    height: calc(100% - 120px);
+    z-index: 9;
+    top: 120px;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	@include transitionMedium;
+	
+	@include respond('laptop') {
+       height: calc(100% - 80px);
+		top: 80px;
+    }
+	&.active{
+		right: 0;
+	}
+	@include respond('tab-port') {
+		width: 300px;
+    }
+}
+.event-btn{
+	@include respond('phone') {
+		height: 41px;
+		padding: 0;
+		width: 41px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.rightside-event{
+	margin-right:380px;
+	
+	
+	@include respond('laptop') {
+        margin-right:0;
+    }
+	& + .footer{
+		margin-right:380px;
+		@include respond('laptop') {
+			margin-right:0;
+		}
+	}
+}
+.schedule-event-inner{
+	display: flex;
+    align-items: center;
+	
+	.btn{
+		svg [stroke]{
+			stroke:$primary;
+		}
+		&:hover svg [stroke]{
+			stroke:$white;
+		}
+	}
+}
+.event-calender{
+    color: $black;
+	.bootstrap-datetimepicker-widget table{
+		width:100%;
+		
+		td span, 
+		td i{
+			border-radius: 35px;
+			height: 47px;
+			line-height: 47px;
+		}
+		td{
+			padding: 16px 5px 15px 5px;
+			border-radius: 35px;
+			line-height: 1;
+		}		
+		th{
+			padding:15px 5px;
+			border-radius:$radius;
+			height: 20px;
+			line-height: 20px;
+			width: 20px;
+			font-weight: 400;
+			opacity: 1;
+			font-size: 14px;
+		}
+		
+		.new:hover, 
+		.old:hover{
+			color:$white;
+		}
+		
+		.timepicker-hour, 
+		.timepicker-minute, 
+		.timepicker-second{
+			font-weight: 500;
+		}
+		
+		
+		//td.active, 
+		//td.active:hover,
+		//span, 
+		//i{
+		//	color:$black;
+		//}
+		thead tr .picker-switch{
+			font-size: 20px;
+			font-weight: 500;
+			opacity: 1;
+			@include respond('phone-land') {
+				font-size: 20px;
+			}
+		}
+		.next,
+		.prev{
+			font-size: 14px;
+		}
+		
+		.btn-primary{
+			border:0;
+			padding:10px;
+		}
+		.btn-primary,
+		td span.active, 
+		td i.active,
+		thead tr:first-child th:hover,
+		td span:hover, 
+		td i:hover,
+		td.day:hover, 
+		td.hour:hover, 
+		td.minute:hover, 
+		td.second:hover{
+			background:$primary; 
+			color:$white;
+		}
+		
+	}
+	
+	
+	.datepicker table tr td.active, .datepicker table tr td.today{
+		background: $primary!important;
+		color:$white!important;
+		box-shadow:none;
+	}
+}
+.event-list{
+	.date-bx{
+		position:relative;
+		border:1px solid transparent;
+		@include transitionMedium;
+		width:84px;
+		
+		&:after{
+			
+			height:26px;
+			width:26px;
+			border:3px solid $white;
+			position:absolute;
+			background:$primary;
+			border-radius:100%;
+			bottom:-13px;
+			left:50%;
+			transform:translateX(-50%);
+			content:"";
+		}
+	}
+	&:hover .bgl{
+		&-primary{
+			background:transparent;
+			border-color:$primary;
+			&:after{
+				background:$primary;
+			}
+		}
+		&-success{
+			background:transparent;
+			border-color:$success;
+			&:after{
+				background:$success;
+			}
+		}
+	}
+}

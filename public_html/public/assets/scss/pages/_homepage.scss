@@ -1,0 +1,236 @@
+.star-review{
+	i{
+		font-size:16px;
+		&.text-gray{
+			color:#d9d9d9;
+		}
+	}
+	span{
+		color:$black;
+	}
+}
+.bootstrap-datetimepicker-widget table td.active.today:before{
+	content:none;
+}
+.recovered-chart-deta{
+	margin-bottom:25px;
+	
+	.col{
+		display: flex;
+		padding: 0;
+		margin-right: 15px;
+
+		p{
+			margin-bottom:5px;
+			line-height:1.5;
+		}
+		h5{
+			font-size:18px;
+			margin-bottom:0;
+		}
+		[class*="bg-"]{
+			height: 54px;
+			width: 12px;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+	}
+}
+.chart-deta{
+	.col{
+		display: flex;
+		padding: 0;
+		margin-right: 15px;
+		margin-bottom: 45px;
+		&:last-child{
+			margin-bottom:0;
+		}
+		@include respond('phone') {
+			margin-bottom: 5px;
+		}	
+		p{
+			margin-bottom:5px;
+			line-height:1.5;
+			font-weight: 500;
+			@include respond('phone') {
+				font-size: 14px;
+				display: inline-block;
+			}	
+		}
+		h3{
+			font-size:22px;
+			margin-bottom:0;
+			color:$black;
+			@include respond('phone') {
+				font-size: 14px;
+				display: inline-block;
+			}	
+		}
+		[class*="bg-"]{
+			height: 38px;
+			width: 38px;
+			border-radius: 0.875rem;
+			@include respond('phone') {
+				height: 16px;
+				width: 16px;
+			}	
+		}
+		
+	}
+}
+.card-tabs {
+    .nav-tabs {
+		border-bottom: 0px;
+		background: $light;
+		border-radius: 2rem;
+		flex-wrap: unset;
+			
+        .nav-link {
+            border-radius:2rem;
+		    padding: 10px 20px;
+			font-weight: 500;
+			font-size:14px;
+			border:0;
+			
+            &.active {
+                background: $primary;
+                color: $white;
+            }
+        }
+    }
+}
+.rounded{
+	border-radius:$radius !important;
+}
+.left350{
+	left:-350px;
+}
+.deznav .copyright{
+	font-size:13px;
+	padding: 0 50px;
+	color: $black;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	
+	p{
+		margin-bottom:10px;
+	}
+	
+	@include custommq($max: 1600px) {
+		padding:0 30px;
+	}
+}
+.recentOrderTable {
+    table {
+        margin-bottom: 0;
+        overflow: hidden;
+        thead {
+            th {
+                font-size: 12px;
+            }
+        }
+        tbody {
+            td {
+                color: $dark;
+                font-weight: 500;
+                line-height: 40px;
+                @at-root [data-theme-version="dark"] & {
+                    color: $d-ctl;
+                }
+                img {
+                    border-radius: 50px;
+                }
+                .custom-dropdown {
+                    i {
+                        padding: 0 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+#activeUser {
+    height: 215px!important;
+}
+
+#activeUser {
+    height: 180px!important;
+}
+
+span#counter {
+    font-size: 30px;
+    font-weight: 700;
+    color: $primary;
+}
+
+.social-graph-wrapper {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    color: $white;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    
+	&.widget-facebook {
+        background-color: $facebook;
+    }
+    &.widget-twitter {
+        background-color: $twitter;
+    }
+    &.widget-linkedin {
+        background-color: $linkedin;
+    }
+    &.widget-googleplus {
+        background-color: $google-plus;
+    }
+    .s-icon {
+        font-size: 24px;
+        position: relative;
+        // top: 0.625rem;
+        padding: 0 10px;
+    }
+}
+.mt-widget{
+	margin-top:-40px;
+}
+.welcome-card{
+	background:#fff9c7;
+	padding-right:340px;
+	img{
+		right: 45px;
+		top: -45px;
+		@include respond('tab-port') {
+			right: 20px;
+			top: auto;
+			bottom: 20px;
+			width: 120px;
+		}
+	}
+	@include respond('tab-port') {
+		padding-right: 120px;
+		padding-top: 30px !important;
+		padding-left: 30px !important;
+	}
+	@include respond('phone') {
+		padding: 20px !important;
+		margin-bottom: 20px!important;
+		img{
+			display: none;
+		}
+	}
+}
+
+// Heart Blast
+.heart {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url('../images/like.png');
+    cursor: pointer;
+    margin: -25px -15px;
+}
+.heart-blast {
+    background-position: -1680px 0;
+    transition: background 1s steps(28);
+}
